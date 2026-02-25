@@ -1,0 +1,29 @@
+unID - Matlab toolbox for the estimation of the Information Decomposition terms in the univariate framework through local approach
+
+References:
+- Y. Antonacci, C. Barà, G. de Felice, A. Sferlazza, R. Pernice, and L. Faes. 'Exploring transient neurophysiological states through local and time-varying measures of information dynamics'. Applied Mathematics and Computation, 500:129437, 2025.
+- C. Barà, A. Zaccaro, Y. Antonacci, M. Dalla Riva, A. Busacca, F. Ferri, L. Faes, and R. Pernice. L'ocal and global measures of information storage for the assessment of heartbeat-evoked cortical responses'. Biomedical Signal Processing and Control, 86:105315, 2023.
+
+Demonstration scripts
+_____________________
+Simulation - Computation of local information storage in an AR stochastic process while varying innovation variance and AR coefficient as a periodic square waveform 
+Application - Computation of local information storage on a respiratory signal of a subject with apnea events (load apnea.mat)
+
+Main computational functions
+_____________________________
+local_unID_buildvectors - Generate of the observation matrix
+local_unID_VAR - Compute the covariance matrice from connectivity matrix and residual covariance 
+local_unID_lin - Compute the local information decomposition terms (entropy, conditional entropy, information storge and dynamic entropies) via the linear parametric approach using covariance matrix
+local_unID_knn_mex - Compute the local information decomposition terms (entropy, conditional entropy, information storge and dynamic entropies) via the model-free k-nearest neighbor approach using the observarion matrix (this makes use of closed mex functions)
+local_unID_knn - Compute the local information decomposition terms (entropy, conditional entropy, information storge and dynamic entropies) via the model-free k-nearest neighbor approach using the observarion matrix 
+local_unID_Hlin - Compute local entropy via the linear parametric approach using covariance matrix
+local_unID_Hknn_mex - Compute local entropy via the model-free k-nearest neighbor approach using the observarion matrix (this makes use of closed mex functions)
+local_unID_Hknn - Compute local entropy via the model-free k-nearest neighbor approach using the observarion matrix 
+
+Other functions
+________________
+idMVAR - Identification of strictly causal model through ordinary least squares
+mos_idMVAR - Model order selection for identification of strictly causal model
+var_nonstat - Generate random non-stationary Gaussian VAR time series
+tv_IS - Computation of time varying IS from TV-AR model parameters
+nn_search, nn_prepare, range_search - mex functions for nearest neighbors searching and counting
